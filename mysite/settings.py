@@ -26,7 +26,6 @@ INSTALLED_APPS = [
     'blog',
 ]
 
-X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
