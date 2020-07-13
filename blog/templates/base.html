@@ -11,25 +11,25 @@
     <title>HealthyLife UZ</title>
   </head>
   <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">HealthyLife UZ</a>
+      <a class="navbar-brand" href="{%url 'blog-home'%}">HealthyLife</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-            <a class="nav-link" href="#">ГЛАВНАЯ</a>
+        <li class="nav-item active">
+            <a class="nav-link" href="{% url 'blog-home' %}">ГЛАВНАЯ</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">О НАС</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'about'%}">О НАС</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">ПРОЕКТЫ</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="#"></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">ЗАДАЧИ</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="#"></a>
           </li>
         </ul>
       </div>
@@ -55,59 +55,37 @@
 
         <!-- Search Widget -->
         <div class="card my-4">
-          <h5 class="card-header">Search</h5>
           <div class="card-body">
+            <form action="{% url 'blog-home' %}">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search for...">
+              
+              <input type="text" class="form-control" placeholder="Найти ..." name="search">
               <span class="input-group-btn">
-                <button class="btn btn-secondary" type="button">Go!</button>
+                <button class="btn btn-info" type="submit" action="{% url 'blog-home' %}">Поиск</button>
               </span>
-            </div>
+            </div></form>
           </div>
         </div>
 
         <!-- Categories Widget -->
         <div class="card my-4">
-          <h5 class="card-header">Categories</h5>
-          <div class="card-body">
-            <div class="row">
-              <div class="col-lg-6">
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="#">Web Design</a>
-                  </li>
-                  <li>
-                    <a href="#">HTML</a>
-                  </li>
-                  <li>
-                    <a href="#">Freebies</a>
-                  </li>
+          <h5 class="card-header text-center">Наши партнеры</h5>
+          <div class="card-body">   
+                <ul class="list-group">
+                  <a href="#" style="text-decoration: none;"><li class="list-group-item text-center" style="color: black;">UzMSA (Phenomenon)</li></a>
+                  <a href="#" style="text-decoration: none;"><li class="list-group-item text-center" style="color: black;">PsychiatieTMA</li></a>
+                  <a href="#" style="text-decoration: none;"><li class="list-group-item text-center" style="color: black;">WHO Uzbekistan</li></a>
                 </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="#">JavaScript</a>
-                  </li>
-                  <li>
-                    <a href="#">CSS</a>
-                  </li>
-                  <li>
-                    <a href="#">Tutorials</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
         </div>
 
         <!-- Side Widget -->
-        <div class="card my-4">
+        <!-- <div class="card my-4">
           <h5 class="card-header">Side Widget</h5>
           <div class="card-body">
             You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
           </div>
-        </div>
+        </div> -->
 
       </div>
 
@@ -120,7 +98,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+      <p class="m-0 text-center text-white">Copyright &copy; Healthy Life Uzbekistan 2018-2020</p>
     </div>
     <!-- /.container -->
   </footer>

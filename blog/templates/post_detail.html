@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 style="margin-bottom: 20px;">{{post.title}}</h1>
+<a href="#" class="badge badge-info">{{post.author}}</a>   {{post.publish}}
+
+{% if post.img_link %}
+<img src='{{post.img_link}}' style="width: 100%; margin-bottom: 20px; margin-top: 20px;">
+{% endif %}
+
+<p>{{post.body|safe}}</p>
+<p style="margin-bottom: 100px;"></p>
+
+
+
+{% endblock content%}
