@@ -1,9 +1,9 @@
 from django.contrib import admin
 from .models import Post, Comment
-from django_summernote.admin import SummernoteModelAdmin
 
 
-class PostAdmin(SummernoteModelAdmin):
+
+class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug', 'author', 'publish',)
     list_filter = ('publish', 'author')
     search_fields = ('title', 'body')
@@ -11,7 +11,6 @@ class PostAdmin(SummernoteModelAdmin):
     raw_id_fields = ('author',)
     date_hierarchy = 'publish'
     ordering = ['publish']
-    summernote_fields = ('body',)
 admin.site.register(Post, PostAdmin)
 
 
